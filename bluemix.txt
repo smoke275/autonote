@@ -1,0 +1,39 @@
+{
+  "url": "https://stream.watsonplatform.net/speech-to-text/api",
+  "username": "d18ba3bd-41d3-46ed-b72f-994b234e3c4a",
+  "password": "cibwiPkwnPMt"
+}
+
+
+
+
+curl -X POST -u d18ba3bd-41d3-46ed-b72f-994b234e3c4a:cibwiPkwnPMt \
+--header "Content-Type: audio/mp3" \
+--header "Transfer-Encoding: chunked" \
+--data-binary @/home/sum675/Documents/audio.mp3 \
+"https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?timestamps=true&max_alternatives=3"
+
+fe01ce2a7fbac8fafaed7c982a04e229
+
+
+
+ffmpeg -i abc.mp4 -vn -acodec libmp3lame -ac 2 -ab 160k -ar 48000 abc.mp3
+
+
+{
+  "url": "https://gateway-a.watsonplatform.net/visual-recognition/api",
+  "note": "It may take up to 5 minutes for this key to become active",
+  "api_key": "dd070fc5a0ac8981df52c9f6d6dd60f72b12a568"
+}
+
+
+
+curl -X POST --form "images_file=@/home/sum675/Documents/Capture_3.PNG" \
+"https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=dd070fc5a0ac8981df52c9f6d6dd60f72b12a568&version=2016-05-20"
+
+
+curl -X POST -u d18ba3bd-41d3-46ed-b72f-994b234e3c4a:cibwiPkwnPMt \
+--header "Content-Type: audio/mp3" \
+--header "Transfer-Encoding: chunked" \
+--data-binary @/home/sum675/Documents/audio.mp3 \
+"https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?timestamps=true&max_alternatives=3"
