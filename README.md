@@ -1,2 +1,2 @@
-"# autonote" 
-"# autonote" 
+# AutoNote
+We build it using Watson's Cognitive APIs. The process is bifurcated into 2 part. A speech to text converter which uses Watson's SpeechToText API to convert the speech to transcripts with timestamps. The next part deals with video. The video is sampled at a 1s interval and send one by one to the Waston Visual Recognition API which returns a relevance of the snapshot. If the image is relevant to education, it is recognized using the classification tags returned by Watson. Irrelevant snapshots such as a picture of only the professor teaching are eliminated. The relevant pictures are sent to a clustering mechanism achieved using KNearestNeighbours algorithm to eliminated redundant images. These, in turn, are mapped with the corresponding audio timestamps and converted to PDF in python.
